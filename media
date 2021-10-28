@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 10
+int main(int argc, char *argv[])
+{
+    int numeros[MAX];
+    int contador=0;
+    int auxiliar[MAX];
+    int numero=0;
+    float suma=0;
+    for(contador=0;contador<MAX;contador++) {
+        if (numeros [contador]<0)
+        printf("numero negativo error");
+        else 
+        printf("No. %d : ",contador+1);
+        scanf(" %d",&numeros[contador]);
+    }
+    printf("\nElementos del vector : ");
+    for(contador=0;contador<MAX;contador++) {
+        printf(" %d",numeros[contador]);
+    }
+    suma = 0;
+    for(contador=0;contador<MAX;contador++) {
+        suma+=numeros[contador];
+    }
+    printf("\nEl resultado de la media es: %.2f\n",suma/MAX);
+  return 0;
+}
