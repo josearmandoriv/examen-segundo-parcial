@@ -1,0 +1,28 @@
+/*Rivera Trejo José Armando*/
+/*examen segundo Parcial*/
+#include <stdio.h> 
+int main ()
+{
+	int a,b,c,d,e;
+	printf("indica el primer valor: ");
+	scanf("%d",&a);
+	printf("indica el segundo valor: ");
+	scanf("%d",&b);
+	printf("indica el tercer valor: ");
+	scanf("%d",&c);
+	printf("indica el cuarto valor: ");
+	scanf("%d",&d);
+	printf("indica el quinto valor: ");
+	scanf("%d",&e);
+	
+	printf("a\t %d\t %d",a,&a);
+	printf("\n");
+	printf("b\t %d\t %d",b,&b);
+	printf("\n");
+	printf("c\t %d\t %d",c,&c);
+	printf("\n");
+	printf("d\t %d\t %d",d,&d);
+	printf("\n");
+	printf("e\t %d\t %d",e,&e);
+	printf("\n");
+}
