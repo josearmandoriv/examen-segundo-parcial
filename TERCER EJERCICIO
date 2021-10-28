@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#define MAX 25
+void OrdenarSeleccion (int numeros[ ], int N);
+int main(int argc, char *argv[])
+{
+    double numeros[MAX];
+    int contador=0;
+    double auxiliar[MAX];
+    int numero=0;
+    float suma=0,i;
+    for(contador=0;contador<MAX;contador++) {
+        printf("No. %d : ",contador+1);
+        scanf(" %d",&numeros[contador]);
+    }
+    suma = 0;
+    for(contador=0;contador<MAX;contador++) {
+        suma+=numeros[contador];
+    }
+    printf("\nEl resultado de la media es: %.2f\n",suma/MAX);
+    
+    for (i=0;i<6;i++){
+	 	printf("%i", numeros[i]);
+	 	OrdenarSeleccion(numeros, 25); 
+	 }
+	 getch();
+	 return 0;
+}  
+void OrdenarSeleccion (int numeros[ ], int N)
+{
+int i, j, pos_min;
+double tmp;
+for (i=0; i<N-1; i++) {
+pos_min = i;
+for (j=i+1; j<N; j++)
+if (numeros[j]<numeros[pos_min])
+pos_min = j;
+tmp=numeros[i];
+numeros[i]=numeros[pos_min];
+numeros[pos_min]=tmp; 
+}
+}
